@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_user"
+    app:startDestination="@id/userDataFragment">
+
+    <fragment
+        android:id="@+id/userDataFragment"
+        android:name="com.manadesarrollos.kotlintest.Activities.Activities.Fragments.UserListFragment"
+        android:label="user_data_fragment"
+        tools:layout="@layout/user_list_fragment">
+        <action
+            android:id="@+id/action_userDataFragment_to_userManagerFragment"
+            app:destination="@+id/userList" />
+    </fragment>
+    <fragment
+        android:id="@+id/userList"
+        android:name="com.manadesarrollos.kotlintest.Activities.Activities.Fragments.UserDataFragment"
+        android:label="user_list_fragment"
+        tools:layout="@layout/user_data_fragment" />
+    <fragment
+        android:id="@+id/userManagerFragment"
+        android:name="com.manadesarrollos.kotlintest.Activities.Activities.Fragments.UserManagerFragment"
+        android:label="user_manager_fragment"
+        tools:layout="@layout/user_manager_fragment" />
+</navigation>
